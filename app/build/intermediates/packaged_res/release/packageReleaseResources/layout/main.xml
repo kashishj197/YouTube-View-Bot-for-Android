@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".MainActivity"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/colorPrimary">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/mainRelativeLayout1"
+		android:padding="10dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="24dp">
+
+			<Button
+				android:layout_width="wrap_content"
+				style="?android:attr/buttonStyleSmall"
+				android:layout_height="wrap_content"
+				android:text="START"
+				android:id="@+id/runButton"
+				android:onClick="go"
+				android:layout_marginBottom="10dp"
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"
+				android:background="@drawable/button"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:paddingRight="10dp"
+				android:paddingLeft="10dp"
+				android:elevation="8dp"
+				android:textColor="#FF0F00"
+				android:textStyle="bold"/>
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/mainRelativeLayout1"
+		android:id="@+id/mainRelativeLayout4"
+		android:padding="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Control Panel"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:id="@+id/mainTextView1"
+			android:textStyle="bold"
+			android:textColor="#FFFFFF"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/mainTextView1">
+
+			<View
+				android:background="?android:attr/dividerHorizontal"
+				android:layout_width="1dp"
+				android:layout_height="87dp"
+				android:layout_centerHorizontal="true"
+				android:id="@+id/mainView1"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/mainView1"
+				android:layout_alignBottom="@id/mainView1"
+				android:layout_alignTop="@id/mainView1">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Watch Time"
+					android:id="@+id/speedTitle"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:gravity="center"
+					android:background="#FFFFFF"
+					android:textColor="#F60E00"
+					android:elevation="4dp"/>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_below="@id/speedTitle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:padding="10dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Average"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="#FFFFFF"/>
+
+					<Switch
+						android:checked="true"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/watchTimeSwitch"
+						android:thumbTint="@color/colorSwitch"
+						android:layout_margin="6dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Turbo"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="#FFFFFF"/>
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/mainView1"
+				android:layout_alignBottom="@id/mainView1"
+				android:layout_alignTop="@id/mainView1">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Random UA"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:gravity="center_horizontal"
+					android:background="#FFFFFF"
+					android:textColor="#FF0F00"
+					android:id="@+id/mainTextView2"
+					android:elevation="4dp"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/mainTextView2"
+					android:orientation="horizontal"
+					android:gravity="center"
+					android:padding="10dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Always"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:id="@+id/mainTextView3"
+						android:textColor="#FDFDFD"/>
+
+					<Switch
+						android:checked="true"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@id/mainTextView3"
+						android:id="@+id/userAgentSmart"
+						android:thumbTint="@color/colorSwitch"
+						android:layout_margin="6dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Smart"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_toRightOf="@id/userAgentSmart"
+						android:textColor="#FFFFFF"/>
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/mainRelativeLayout2">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Target"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:id="@+id/mainTextView4"
+			android:padding="6dp"
+			android:textColor="#FFFFFF"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/urlBar"
+			android:hint="https://youtu.be/YRBd2qsXxHo"
+			android:gravity="top|left"
+			android:inputType="textMultiLine|textUri"
+			android:maxLines="4"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="#FFFFFF"
+			android:textColorHint="#E8E8E8"
+			android:layout_below="@id/mainTextView4"/>
+
+	</RelativeLayout>
+
+	<ScrollView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/mainRelativeLayout2"
+		android:layout_above="@id/mainRelativeLayout4">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/mainRelativeLayout3"
+			android:paddingRight="10dp"
+			android:paddingLeft="10dp">
+
+			<empire.of.e.simplebot.MyWebView
+				android:id="@+id/browser"
+				android:layout_width="match_parent"
+				android:layout_height="300dp"
+				android:isScrollContainer="true"
+				android:alpha="0.9"
+				android:clickable="false"
+				android:contextClickable="false"
+				android:selectable="false"
+				android:focusable="false"
+				android:textIsSelectable="false"
+				android:enabled="false"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="-210dp"/>
+
+			<TextView
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textColor="@color/colorAccent"
+				android:id="@+id/time"
+				android:textSize="48sp"
+				android:layout_centerHorizontal="true"
+				android:textStyle="normal"
+				android:text="0"
+				android:gravity="center"
+				android:shadowRadius="1.0"
+				android:layout_below="@id/browser"
+				android:layout_marginTop="35dp"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/script"
+				android:textColor="@color/colorAccent"
+				android:gravity="center_vertical|center_horizontal"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:padding="24dp"
+				android:layout_below="@id/time"
+				android:layout_marginTop="30dp"
+				android:textStyle="bold"
+				android:text="Please add multiple video links\n(seperated by a new line)\n\nStart the bot, sit back and drink a cup of warm beverage - we'll do the rest.\n\nTesting Results,\nYouTube shows a 26% loss of views displayed in app - using Smart RandomUA &amp; Short WatchTime"
+				android:maxLines="10"
+				android:lines="10"
+				android:background="#474747"/>
+
+			<ProgressBar
+				android:layout_width="150dp"
+				android:layout_height="150dp"
+				android:id="@+id/loader"
+				android:marqueeRepeatLimit="1"
+				android:visibility="gone"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@id/browser"
+				android:layout_marginTop="10dp"/>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignBottom="@id/browser"
+				android:layout_alignTop="@id/browser"
+				android:background="#000000"
+				android:alpha="0.7"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@color/colorPrimary"
+				android:text="LIVE"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:gravity="center"
+				android:textStyle="bold"
+				android:textColor="#FFFFFF"
+				android:alpha="0.6"
+				android:id="@+id/mainTextView5"
+				android:padding="10dp"
+				android:layout_alignBottom="@id/browser"
+				android:layout_centerHorizontal="true"/>
+
+		</RelativeLayout>
+
+	</ScrollView>
+
+</RelativeLayout>
+

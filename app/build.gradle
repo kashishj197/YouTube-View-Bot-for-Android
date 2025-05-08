@@ -4,11 +4,9 @@ plugins {
 android {
     namespace 'empire.of.e.simplebot'
     compileSdkVersion 34
-    buildToolsVersion "34.0.0"
     defaultConfig {
         applicationId "empire.of.e.simplebot"
         minSdkVersion 21
-        targetSdkVersion 34
         versionCode 101
         versionName "1.1-TimingCorrection"
     }
@@ -16,6 +14,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {

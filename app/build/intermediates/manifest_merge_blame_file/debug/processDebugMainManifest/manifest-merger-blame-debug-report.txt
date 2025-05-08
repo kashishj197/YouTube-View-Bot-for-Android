@@ -1,0 +1,132 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="empire.of.e.simplebot"
+4    android:versionCode="101"
+5    android:versionName="1.1-TimingCorrection" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="21" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:5:3-64
+11-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:5:20-62
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:6:3-77
+12-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:6:20-74
+13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+13-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:7:5-77
+13-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:7:22-74
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:8:5-68
+14-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:8:22-65
+15
+16    <permission
+16-->[androidx.core:core:1.9.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\7519728c43c7501f1f98ec97271e1ab9\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+17        android:name="empire.of.e.simplebot.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.9.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\7519728c43c7501f1f98ec97271e1ab9\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.9.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\7519728c43c7501f1f98ec97271e1ab9\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="empire.of.e.simplebot.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.9.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\7519728c43c7501f1f98ec97271e1ab9\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.9.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\7519728c43c7501f1f98ec97271e1ab9\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:10:5-45:19
+23        android:allowBackup="true"
+23-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:11:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.9.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\7519728c43c7501f1f98ec97271e1ab9\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:extractNativeLibs="true"
+27        android:hardwareAccelerated="true"
+27-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:15:5-39
+28        android:icon="@drawable/ic_launcher"
+28-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:12:9-45
+29        android:label="@string/app_name"
+29-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:13:9-41
+30        android:resizeableActivity="true"
+30-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:16:5-40
+31        android:theme="@style/AppTheme" >
+31-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:14:9-40
+32        <activity
+32-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:18:9-35:20
+33            android:name="empire.of.e.simplebot.MainActivity"
+33-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:20:13-41
+34            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+34-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:24:7-116
+35            android:exported="true"
+35-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:19:13-36
+36            android:launchMode="singleTop"
+36-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:21:7-37
+37            android:screenOrientation="sensorPortrait"
+37-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:22:7-49
+38            android:theme="@style/AppTheme" >
+38-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:23:7-38
+39            <intent-filter>
+39-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:25:13-28:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:26:17-69
+40-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:26:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:27:17-77
+42-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:27:27-74
+43            </intent-filter>
+44            <intent-filter android:label="@string/share_name" >
+44-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:29:7-34:29
+44-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:30:9-43
+45                <action android:name="android.intent.action.SEND" />
+45-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:31:17-69
+45-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:31:25-66
+46
+47                <category android:name="android.intent.category.DEFAULT" />
+47-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:32:17-76
+47-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:32:27-73
+48
+49                <data android:mimeType="text/*" />
+49-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:33:17-51
+49-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:33:23-48
+50            </intent-filter>
+51        </activity>
+52
+53        <service
+53-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:37:5-40:44
+54            android:name="empire.of.e.simplebot.Notify"
+54-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:37:14-36
+55            android:enabled="true"
+55-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:38:13-35
+56            android:exported="false"
+56-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:39:13-37
+57            android:stopWithTask="false" />
+57-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:40:13-41
+58
+59        <receiver android:name="empire.of.e.simplebot.NotificationActionReceiver" />
+59-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:41:9-64
+59-->C:\Users\nonuk\StudioProjects\YouTube-View-Bot-for-Android\app\src\main\AndroidManifest.xml:41:19-61
+60
+61        <provider
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+62            android:name="androidx.startup.InitializationProvider"
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+63            android:authorities="empire.of.e.simplebot.androidx-startup"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+64            android:exported="false" >
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+65            <meta-data
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+66                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+67                android:value="androidx.startup" />
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nonuk\.gradle\caches\8.12\transforms\3ada78449962b76c994c018e7f89db60\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+68            <meta-data
+68-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nonuk\.gradle\caches\8.12\transforms\14e9e9959583dfbe9baca4321db8031d\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+69                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+69-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nonuk\.gradle\caches\8.12\transforms\14e9e9959583dfbe9baca4321db8031d\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+70                android:value="androidx.startup" />
+70-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nonuk\.gradle\caches\8.12\transforms\14e9e9959583dfbe9baca4321db8031d\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+71        </provider>
+72    </application>
+73
+74</manifest>

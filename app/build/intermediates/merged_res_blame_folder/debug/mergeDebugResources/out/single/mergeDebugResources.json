@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "empire.of.e.simplebot.app-debug-20:/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "empire.of.e.simplebot.app-main-22:/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "empire.of.e.simplebot.app-debug-20:/drawable_button.xml.flat",
+        "source": "empire.of.e.simplebot.app-main-22:/drawable/button.xml"
+    },
+    {
+        "merged": "empire.of.e.simplebot.app-debug-20:/layout_main.xml.flat",
+        "source": "empire.of.e.simplebot.app-main-22:/layout/main.xml"
+    },
+    {
+        "merged": "empire.of.e.simplebot.app-debug-20:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "empire.of.e.simplebot.app-main-22:/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "empire.of.e.simplebot.app-debug-20:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "empire.of.e.simplebot.app-main-22:/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "empire.of.e.simplebot.app-debug-20:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "empire.of.e.simplebot.app-main-22:/drawable-hdpi/ic_launcher.png"
+    }
+]

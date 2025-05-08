@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+array agents
+array firstNames
+array lastNames
+color colorAccent
+color colorAccentVideo
+color colorAccentWhite
+color colorPrimary
+color colorPrimaryDark
+color colorSwitch
+drawable button
+drawable ic_launcher
+id browser
+id loader
+id mainRelativeLayout1
+id mainRelativeLayout2
+id mainRelativeLayout3
+id mainRelativeLayout4
+id mainTextView1
+id mainTextView2
+id mainTextView3
+id mainTextView4
+id mainTextView5
+id mainView1
+id runButton
+id script
+id speedTitle
+id time
+id urlBar
+id userAgentSmart
+id watchTimeSwitch
+layout main
+string app_name
+string share_name
+style AppTheme
+style AppThemeRev

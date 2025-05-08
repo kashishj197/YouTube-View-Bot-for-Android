@@ -17,7 +17,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.os.SystemClock;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,7 +94,7 @@ public class MainActivity extends Activity {
 				js = findViewById(R.id.script);
 				pb = findViewById(R.id.loader);
 
-				
+
 
 
 				smartUA = findViewById(R.id.userAgentSmart);
@@ -114,8 +114,8 @@ public class MainActivity extends Activity {
 	    	getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 				setStatusColour(R.color.colorPrimary);
 
-				PowerManager mgr=(PowerManager) getSystemService(Context.POWER_SERVICE);
-				wl = mgr.newWakeLock(mgr.PARTIAL_WAKE_LOCK, "Beam");
+				PowerManager mgr = (PowerManager) getSystemService(Context.POWER_SERVICE);
+				wl = mgr.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Beam:WakeLock");
 				wl.acquire();
 
 			  createNotificationChannel();
@@ -143,17 +143,17 @@ public class MainActivity extends Activity {
 						targetOffset = longTimeOffset;
 						watchTime = targetTime + rand.nextInt(targetOffset);
 				}
-				
+
 				user = generateRandomAgent();
 
 
 				browser.getSettings().setUserAgentString(user);
-				browser.getSettings().setAppCacheEnabled(true);
+//				browser.getSettings().setAppCacheEnabled(true);
 				browser.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 				//browser.getSettings().setBlockNetworkImage(true);
 				//browser.getSettings().setSafeBrowsingEnabled(true);
 				//browser.getSettings().setPluginState(WebSettings.PluginState.OFF);
-			
+
 				browser.getSettings().setDatabaseEnabled(false);
 				browser.getSettings().setLoadWithOverviewMode(true);
 				browser.getSettings().setDomStorageEnabled(false);
@@ -168,7 +168,7 @@ public class MainActivity extends Activity {
 				browser.setClickable(false);
 				browser.setActivated(false);
 				browser.setEnabled(false);
-				
+
 				browser.setOnTouchListener(new WebView.OnTouchListener(){
 
 								@Override
@@ -177,9 +177,9 @@ public class MainActivity extends Activity {
 								}
 						});
 						browser.setClickable(false);
-				   
-					 
-				
+
+
+
 				browser.saveState(state);
 
 				String enteredURL = pref.getString("oldUrls", urlBar.getText().toString());
@@ -232,13 +232,13 @@ public class MainActivity extends Activity {
 				if(urlBar.getText() != null && urlBar.getText().length() > 8 && urlBar.getText().toString().contains("youtu") && urlBar.getText().toString().toLowerCase().startsWith("http"))
 				{
 				if (hasInternet()) {
-						
-						if (!running) { 
+
+						if (!running) {
 								running = true;
 								run.setText("STOP");
 								smartUA.setEnabled(false);
 								watchTimeSwitch.setEnabled(false);
-								
+
 								load++;
 								String enteredURL = "";
 								if (urlBar.getText() != null) {
@@ -316,7 +316,7 @@ public class MainActivity extends Activity {
 										run.setEnabled(true);
 										smartUA.setEnabled(true);
 										watchTimeSwitch.setEnabled(true);
-										
+
 								}
 						}
 				}
@@ -419,7 +419,7 @@ public class MainActivity extends Activity {
 				@Override
 				public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
 						return true;
-				}				
+				}
 
 
 				@Override
@@ -481,21 +481,21 @@ public class MainActivity extends Activity {
 
 		int totalLoops;
 		int nowLoop;
-		
+
 		int breaker = 0;
 
 		boolean needsPause = false;
 		int baseWidth = 0;
 		int baseHeight = 0;
-		
+
 		final Runnable r = new Runnable() {
 				public void run() {
 						new Thread(new Runnable(){
 
 										@Override
 										public void run() {
-												
-												
+
+
 												me.runOnUiThread(new Runnable(){
 
 																@Override
@@ -507,10 +507,10 @@ public class MainActivity extends Activity {
 																				browser. clearHistory();
 																			  browser. clearCache(true); // important
 																				browser. clearAnimation();
-																		    
+
 																				browser. restoreState(state);
 																				ViewGroup.LayoutParams web = browser. getLayoutParams();
-																			
+
 																				if(baseWidth+baseHeight == 0)
 																				{
 																						baseWidth = web.width;
@@ -537,11 +537,11 @@ public class MainActivity extends Activity {
 																						targetOffset = longTimeOffset;
 																						watchTime = targetTime + rand.nextInt(targetOffset);
 																				}
-																				
-																				
-																				
-																				
-																				
+
+
+
+
+
 																				if (useSmartUA()) {
 																						if (totalLoops - nowLoop >= smartUAtarget + rand.nextInt(smartUAoffset)) {
 																								user = generateRandomAgent();
@@ -551,9 +551,9 @@ public class MainActivity extends Activity {
 																				else {
 																						user = generateRandomAgent();
 																				}
-																				
+
 																				browser.clearMatches();
-																				
+
 																				count ++;
 																				String[] urls = enteredURL.split("\n");
 																				maxUrl = urls.length - 1;
@@ -575,14 +575,14 @@ public class MainActivity extends Activity {
 																						String timeString = String.format("%02dh:%02dm:%02ds", hours, minutes, seconds);
 
 																						int percent = (int)((count / 100.0f) *85);
-																				
+
 																						if(notifyVisible)
 																						{
 																								String descr = "Auto viewing in progress, " + count + " views done.";
-																								Notify.updateNotification(descr);
+																								Notify.updateNotification(MainActivity.this, descr);
 																						}
-																						
-																						
+
+
 																						js.setText("Load Statistics,\n" + count + " total loads\n"+ "" + timeString + " view time" + "\n\nLast Load,\n" + browser.getTitle().replace(" - YouTube", ""));
 																					//	stopService(noti);
 																						int detectionAt = 45+rand.nextInt(5);
@@ -591,25 +591,25 @@ public class MainActivity extends Activity {
 																								int sec = 1000;
 																								int minute = 60*sec;
 																								int hour = 60*minute;
-																								
+
 																								watchTime = (5*minute)+rand.nextInt((20*minute));
 																								js.setText("High Traffic Request Detected on Load "+totalLoops+"\n\nBypass Method Used,\nTemporary random wait time, set to "+(watchTime/minute)+" minutes.");
 																								toLoad = "about:blank";
 																								breaker = totalLoops;
 																						}
-																					
-																					
-																						elapsed += watchTime / 1000;
-																						
 
-																						
+
+																						elapsed += watchTime / 1000;
+
+
+
 																						browser.loadUrl(parseURLToFeature(toLoad));
-																					
-																						
-																			
+
+
+
 																						//browser.scrollTo(60,0);
 																						doCountdown(watchTime);
-																						
+
 																						handler.postDelayed(r, watchTime);
 																				}
 
@@ -635,7 +635,7 @@ public class MainActivity extends Activity {
 																				maxUrl = 0;
 																				breaker = 0;
 																				count = 0;
-			
+
 																				load = 0;
 				 																run.setText("START");
 																				run.setEnabled(true);
@@ -706,7 +706,7 @@ public class MainActivity extends Activity {
 				String[] lasts = getResources().getStringArray(R.array.lastNames);
 				String randomLast;
 				randomLast = (lasts[new Random().nextInt(lasts.length)]);
-				if (randomLast.contains("/")) { 
+				if (randomLast.contains("/")) {
 						randomLast = randomLast.replace("/", "-");
 				}
 				if (randomFirst.contains(" ")) {
@@ -722,16 +722,15 @@ public class MainActivity extends Activity {
 				String rest = val.substring(1, val.length());
 				return first + rest;
 		}
-		
+
 		boolean notifyVisible = false;
 
 		@Override
 		protected void onPause() {
 				wl.release();
 				if (running) {
-						Notify.descr = "Auto viewing in background";
-						startService(noti);
-						notifyVisible = true;
+					Notify.updateNotification(this, "Auto viewing in background");
+					notifyVisible = true;
 				}
 				super.onPause();
 		}
@@ -770,7 +769,7 @@ class MyWebView extends WebView {
 				// TODO: Implement this method
 				return false;
 		}
-		
+
 		@Override
 		protected void onWindowVisibilityChanged(int visibility) {
 				boolean useBackground = true;
@@ -778,7 +777,7 @@ class MyWebView extends WebView {
 						if (visibility != View.GONE && visibility != View.INVISIBLE && visibility != View.SCREEN_STATE_ON)
 								super.onWindowVisibilityChanged(visibility);
 				}
-				else 
+				else
 						super.onWindowVisibilityChanged(visibility);
 		}
 
