@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
 				android:hardwareAccelerated="true"
 				android:resizeableActivity = "true">
-				
+
         <activity
             android:name=".MainActivity"
 						android:launchMode="singleTop"
